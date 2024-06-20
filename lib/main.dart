@@ -1,5 +1,4 @@
 import 'package:fitness/pages/CLientData/Gender.dart';
-import 'package:fitness/pages/OnBoardingPage/OnBoardingPage.dart';
 import 'package:flutter/material.dart';
 
 void main() {

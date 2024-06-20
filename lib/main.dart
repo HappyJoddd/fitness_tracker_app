@@ -1,3 +1,4 @@
+import 'package:fitness/pages/CLientData/Gender.dart';
 import 'package:fitness/pages/OnBoardingPage/OnBoardingPage.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       color:  Colors.black,
       debugShowCheckedModeBanner: false,
-      home: OnBoardingPage(),
+      home: GenderPage(),
     );
   }
 }

@@ -85,6 +85,12 @@ flutter:
     - family: KanitEB
       fonts:
         - asset: assets/fonts/Kanit-ExtraBold.ttf
+    - family: KanitM
+      fonts:
+        - asset: assets/fonts/Kanit-Medium.ttf
+    - family: KanitR
+      fonts:
+        - asset: assets/fonts/Kanit-Regular.ttf
   # fonts:
   #   - family: Schyler
   #     fonts:

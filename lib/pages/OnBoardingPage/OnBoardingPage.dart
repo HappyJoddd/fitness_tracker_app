@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -70,7 +71,10 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                       borderRadius: BorderRadius.circular(30),
                     ),
                     child: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(
+                            context, '/gender');
+                      },
                       child: Text(
                         "Get Started",
                         style: TextStyle(

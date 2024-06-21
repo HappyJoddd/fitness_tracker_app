@@ -21,11 +21,11 @@ class DetailPageButton extends StatelessWidget {
           child: ElevatedButton(
             onPressed: onBackTap,
             style: ElevatedButton.styleFrom(
-              shape: CircleBorder(),
-              padding: EdgeInsets.all(11),
+              shape: const CircleBorder(),
+              padding: const EdgeInsets.all(11),
               backgroundColor: IconBackgroundColor,
             ),
-            child: Icon(Icons.arrow_back_ios_new, color: PrimaryColor),
+            child: Icon(Icons.arrow_back, color: Colors.white),
           ),
         ),
       const Spacer(),

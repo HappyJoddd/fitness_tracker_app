@@ -1,5 +1,6 @@
+import 'package:fitness/models/detailspageTitle.dart';
 import 'package:fitness/models/detailspagebutton.dart';
-import 'package:fitness/pages/CLientData/Icons-Widget/GenderIcon.dart';
+import 'package:fitness/pages/DetailsPage/Icons-Widget/GenderIcon.dart';
 import 'package:flutter/material.dart';
 
 class GenderPage extends StatefulWidget {
@@ -26,28 +27,10 @@ class _GenderPageState extends State<GenderPage> {
           width: size.height,
           height: size.height,
           child: Column(children: [
-            SizedBox(
-              height: size.height * 0.1,
-            ),
-            Text(
-              "Tell Us About Yourself".toUpperCase(),
-              style: TextStyle(
-                  fontSize: size.width * 0.06,
-                  color: Colors.white,
-                  fontFamily: "KanitSB"),
-              textAlign: TextAlign.center,
-            ),
-            SizedBox(height: size.height * 0.02),
-            Container(
-              child: Text(
-                "This will help us to find the best \n content for you",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: size.width * 0.04,
-                    fontFamily: 'KanitR'),
-                textAlign: TextAlign.center,
-              ),
-            ),
+            Detailspagetitle(
+                title: "Tell Us About Yourself",
+                text: "This will help us to find the best \n content for you",
+                color: Colors.white),
             SizedBox(height: size.height * 0.055),
             GenderIcon(
               gender: "Male",
@@ -75,8 +58,11 @@ class _GenderPageState extends State<GenderPage> {
             const Spacer(),
             DetailPageButton(
               text: "Next",
-              onFrontTap: () {},
-              ShowBackBotton: true,
+              onFrontTap: () {
+                Navigator.pushNamed(
+                            context, '/age');
+              },
+              ShowBackBotton: false,
             ),
           ]),
         ));

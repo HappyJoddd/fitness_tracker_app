@@ -20,7 +20,7 @@ class GenderIcon extends StatelessWidget {
       onTap: onTap,
       child: Container(
         padding: gender == "Female"
-            ? EdgeInsets.all(size.width * 0.08)
+            ? EdgeInsets.all(size.width * 0.1)
             : EdgeInsets.all(size.width * 0.11),
         decoration: BoxDecoration(
             color: isSelected ? PrimaryColor : Color.fromARGB(255, 35, 34, 34),
@@ -29,7 +29,7 @@ class GenderIcon extends StatelessWidget {
           children: [
             Icon(
               icon,
-              size: size.width * 0.1,
+              size: size.width * 0.15,
               color: isSelected ? Colors.black : Colors.white,
             ),
             SizedBox(height: size.height * 0.01),

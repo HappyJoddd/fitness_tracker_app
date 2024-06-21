@@ -40,13 +40,14 @@ class _HeightPageState extends State<HeightPage> {
                 height: size.height * 0.5,
                 child: Scrollselecter(
                   items: items,
+                  magnification: 1.3,
                 )),
             const Spacer(),
             DetailPageButton(
               text: "Next",
               onFrontTap: () {
                 Navigator.pushNamed(
-                            context, '/weight');
+                            context, '/goal');
               },
               ShowBackBotton: true,
               onBackTap: () {

@@ -40,13 +40,13 @@ class _AgePageState extends State<AgePage> {
                 height: size.height * 0.5,
                 child: Scrollselecter(
                   items: items,
+                  magnification: 1.3,
                 )),
             const Spacer(),
             DetailPageButton(
               text: "Next",
               onFrontTap: () {
-                    Navigator.pushNamed(
-                            context, '/height');
+                Navigator.pushNamed(context, '/weight');
               },
               ShowBackBotton: true,
               onBackTap: () {

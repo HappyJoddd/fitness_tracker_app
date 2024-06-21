@@ -43,13 +43,13 @@ class _GoalsPageState extends State<GoalsPage> {
                 height: size.height * 0.5,
                 child: Scrollselecter(
                   items: items,
+                  magnification: 1.2,
                 )),
             const Spacer(),
             DetailPageButton(
               text: "Next",
               onFrontTap: () {
-                Navigator.pushNamed(
-                            context, '/activity');
+                Navigator.pushNamed(context, '/activity');
               },
               ShowBackBotton: true,
               onBackTap: () {

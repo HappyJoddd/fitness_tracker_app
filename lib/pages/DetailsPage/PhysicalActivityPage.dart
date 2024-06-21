@@ -18,7 +18,7 @@ class _PhysicalactivitypageState extends State<Physicalactivitypage> {
       "Beginner",
       "Intermediate",
       "Advance",
-      "True Beast"
+      "True Athlete"
     ];
     var size = MediaQuery.of(context).size;
     return Scaffold(
@@ -43,6 +43,7 @@ class _PhysicalactivitypageState extends State<Physicalactivitypage> {
                 height: size.height * 0.5,
                 child: Scrollselecter(
                   items: items,
+                  magnification: 1.3,
                 )),
             const Spacer(),
             DetailPageButton(

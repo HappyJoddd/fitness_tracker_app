@@ -3,16 +3,17 @@ import 'package:flutter/material.dart';
 
 class Scrollselecter extends StatelessWidget {
   final List<String> items;
+  final double magnification;
 
-  const Scrollselecter({super.key, required this.items});
+  const Scrollselecter({super.key, required this.items, required this.magnification});
 
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.of(context).size;
     return ListWheelScrollView(
-      magnification: 1.3,
+      magnification: magnification,
       useMagnifier: true,
-      overAndUnderCenterOpacity: 0.08,
+      overAndUnderCenterOpacity: 0.2,
       physics: FixedExtentScrollPhysics(),
       controller: FixedExtentScrollController(initialItem: items.length ~/ 2),
       itemExtent: size.height * 0.05,

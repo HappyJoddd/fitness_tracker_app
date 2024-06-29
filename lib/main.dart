@@ -4,6 +4,8 @@ import 'package:fitness/pages/DetailsPage/GoalPage.dart';
 import 'package:fitness/pages/DetailsPage/HeightPage.dart';
 import 'package:fitness/pages/DetailsPage/PhysicalActivityPage.dart';
 import 'package:fitness/pages/DetailsPage/WeightPage.dart';
+import 'package:fitness/pages/LoginPages/ForgotPasswordPage.dart';
+import 'package:fitness/pages/LoginPages/VerificationPage.dart';
 import 'package:fitness/pages/OnBoardingPage/OnBoardingPage.dart';
 import 'package:flutter/material.dart';
 
@@ -28,6 +30,9 @@ class MyApp extends StatelessWidget {
         '/weight' : (context) => WeightPage(),
         "/goal" : (context) => GoalsPage(),
         '/activity' : (context) => Physicalactivitypage(),
+        // '/login' : (context) => LoginPage(),
+        '/forgotpassword' : (context) => ForgotPasswordPage(),
+        '/verification' : (context) => VerificationPage(),
       },
       home: OnBoardingPage(),
     );

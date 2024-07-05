@@ -41,7 +41,7 @@ android {
         applicationId = "com.example.fitness"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
-        minSdk = 21
+        minSdk = 23
         targetSdk = 34
         versionCode = flutterVersionCode.toInteger()
         versionName = flutterVersionName
@@ -62,6 +62,7 @@ flutter {
 
 dependencies {
     implementation 'com.google.guava:guava:28.2-android'
+    implementation platform('com.google.firebase:firebase-bom:33.1.1')
 }
 
 // I put this block in both build.gradle and android/build.gradle... no clue what it does though...

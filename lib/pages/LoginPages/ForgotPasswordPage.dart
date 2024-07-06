@@ -78,7 +78,9 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
               width: size.width * 0.9,
               alignment: Alignment.center,
               child: TextButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/login');
+                },
                 child: Text(
                   "Try Another Way",
                   style: TextStyle(
@@ -94,7 +96,9 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
                 margin: EdgeInsets.only(bottom: 35),
                 width: size.width * 0.9,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/verification');
+                  },
                   style: ElevatedButton.styleFrom(
                       backgroundColor: PrimaryColor,
                       padding: EdgeInsets.symmetric(

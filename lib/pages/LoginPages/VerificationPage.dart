@@ -1,6 +1,6 @@
 import 'package:fitness/Constant/Colors.dart';
-import 'package:fitness/pages/LoginPages/Widgets/otp.dart';
 import 'package:flutter/material.dart';
+import 'package:pinput/pinput.dart';
 
 class VerificationPage extends StatefulWidget {
   const VerificationPage({super.key});
@@ -12,6 +12,29 @@ class VerificationPage extends StatefulWidget {
 class _VerificationPageState extends State<VerificationPage> {
   @override
   Widget build(BuildContext context) {
+    final defaultPinTheme = PinTheme(
+      width: 56,
+      height: 56,
+      textStyle: TextStyle(
+          fontSize: 20,
+          color: Color.fromRGBO(30, 60, 87, 1),
+          fontWeight: FontWeight.w600),
+      decoration: BoxDecoration(
+        border: Border.all(color: Color.fromRGBO(234, 239, 243, 1)),
+        borderRadius: BorderRadius.circular(20),
+      ),
+    );
+
+    final focusedPinTheme = defaultPinTheme.copyDecorationWith(
+      border: Border.all(color: Color.fromRGBO(114, 178, 238, 1)),
+      borderRadius: BorderRadius.circular(8),
+    );
+
+    final submittedPinTheme = defaultPinTheme.copyWith(
+      decoration: defaultPinTheme.decoration?.copyWith(
+        color: Color.fromRGBO(234, 239, 243, 1),
+      ),
+    );
     var size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.black,
@@ -52,7 +75,7 @@ class _VerificationPageState extends State<VerificationPage> {
             ),
             SizedBox(height: size.height * 0.02),
             Text(
-              "Check Your Email. We've sent you a pin in your Email."
+              "Check Your Phone. We've sent you a pin in your Phone."
                   .toUpperCase(),
               style: TextStyle(
                   color: Colors.white,
@@ -61,7 +84,34 @@ class _VerificationPageState extends State<VerificationPage> {
               textAlign: TextAlign.left,
             ),
             SizedBox(height: size.height * 0.05),
-            OtpWidget(),  
+            Center(
+              child: Pinput(
+                length: 4,
+                
+                submittedPinTheme: defaultPinTheme.copyWith(
+                  textStyle: TextStyle(
+                    color: Colors.white,
+                  ),
+                  decoration: defaultPinTheme.decoration!.copyWith(
+                    color: Color.fromARGB(255, 56, 55, 55),
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: Colors.grey.shade500),
+                  ),
+                ),
+                cursor: Container(
+                  height: size.height * 0.03,
+                  width: 1,
+                  color: Colors.white,
+                ),
+                errorPinTheme: defaultPinTheme.copyBorderWith(
+                  border: Border.all(color: Colors.redAccent),
+                ),
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                pinputAutovalidateMode: PinputAutovalidateMode.onSubmit,
+                showCursor: true,
+                onCompleted: (pin) => print(pin),
+              ),
+            ),
             Spacer(),
             Container(
               width: size.width * 0.9,

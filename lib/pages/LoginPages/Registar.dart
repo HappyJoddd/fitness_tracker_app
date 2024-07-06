@@ -3,6 +3,7 @@ import 'dart:developer';
 import 'package:fitness/Constant/Colors.dart';
 import 'package:fitness/pages/LoginPages/Auth_services.dart';
 import 'package:fitness/pages/LoginPages/LoginPage.dart';
+import 'package:fitness/pages/LoginPages/Phoneverification.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -157,24 +158,6 @@ class _RegisterPageState extends State<RegisterPage> {
                                   BorderSide(color: Colors.grey.shade300),
                             ),
                           )),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          TextButton(
-                            onPressed: () {
-                              Navigator.pushNamed(context, '/forgotpassword');
-                            },
-                            child: Text(
-                              "Forgot Password?",
-                              style: TextStyle(
-                                color: PrimaryColor,
-                                fontSize: screenwidth * 0.04,
-                                fontWeight: FontWeight.w500,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
                       SizedBox(height: screenheight * 0.05),
                       Row(
                           mainAxisAlignment: MainAxisAlignment.start,
@@ -254,16 +237,17 @@ class _RegisterPageState extends State<RegisterPage> {
     );
   }
 
-  gotoHome(BuildContext context) => Navigator.push(
-    context,MaterialPageRoute(builder: (context) => const LoginPage())
-  );
+  gotoHome(BuildContext context) => Navigator.pushNamed(
+      context, '/phoneverification');
   _signup() async {
     final user =
         _auth.createUserWithEmailAndPassward(_email.text, _password.text);
     // ignore: unnecessary_null_comparison
-    if (user != null) {
+    if (user != Null) {
       log("User Created Succesfully");
       gotoHome(context);
+    } else {
+      print('User Not Created');
     }
   }
 }

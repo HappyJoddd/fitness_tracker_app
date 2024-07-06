@@ -73,7 +73,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                     child: TextButton(
                       onPressed: () {
                         Navigator.pushNamed(
-                            context, '/gender');
+                            context, '/login');
                       },
                       child: Text(
                         "Get Started",

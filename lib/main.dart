@@ -7,6 +7,7 @@ import 'package:fitness/pages/DetailsPage/PhysicalActivityPage.dart';
 import 'package:fitness/pages/DetailsPage/WeightPage.dart';
 import 'package:fitness/pages/LoginPages/ForgotPasswordPage.dart';
 import 'package:fitness/pages/LoginPages/LoginPage.dart';
+import 'package:fitness/pages/LoginPages/Phoneverification.dart';
 import 'package:fitness/pages/LoginPages/Registar.dart';
 import 'package:fitness/pages/LoginPages/VerificationPage.dart';
 import 'package:fitness/pages/OnBoardingPage/OnBoardingPage.dart';
@@ -40,8 +41,9 @@ class MyApp extends StatelessWidget {
         '/register': (context) => RegisterPage(),
         '/forgotpassword': (context) => ForgotPasswordPage(),
         '/verification': (context) => VerificationPage(),
+        '/phoneverification': (context) => PhoneNumber(),
       },
-      home: LoginPage(),
+      home: OnBoardingPage(),
     );
   }
 }

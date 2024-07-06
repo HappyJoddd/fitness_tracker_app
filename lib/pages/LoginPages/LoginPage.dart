@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:fitness/Constant/Colors.dart';
+import 'package:fitness/pages/DetailsPage/Gender.dart';
 import 'package:fitness/pages/HomePage/homepage.dart';
 import 'package:fitness/pages/LoginPages/Auth_services.dart';
 import 'package:fitness/pages/LoginPages/Registar.dart';
@@ -250,7 +251,7 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   gotoHome(BuildContext context) => Navigator.push(
-      context, MaterialPageRoute(builder: (context) => const Homepage()));
+      context, MaterialPageRoute(builder: (context) => const GenderPage()));
   _login() async {
     final user =
         await _auth.loginUserWithEmailAndPassward(_email.text, _password.text);
